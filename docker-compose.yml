@@ -32,8 +32,8 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: DevOps
-      MYSQL_USER: DevOps
+      MYSQL_DATABASE: student_club_app
+      MYSQL_USER: pop
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
       SERVICE_TAGS: dev
@@ -48,7 +48,7 @@ services:
       - 8001:80
     environment:
       PMA_HOST: mysql
-      PMA_USER: DevOps
+      PMA_USER: pop
       PMA_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
     depends_on:

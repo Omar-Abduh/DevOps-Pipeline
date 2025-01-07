@@ -28,7 +28,7 @@ This repository provides a Docker Compose configuration for quickly setting up a
 Credits: This approach is largely inspired by the [official Docker instructions](https://docs.docker.com/compose/), with modifications to leverage Docker Compose through a `docker-compose.yml` file. This simplifies the steps required to get the Laravel project up and running.
 ## Step 1
 Install Docker locally
-#### for Linux 
+### for Linux 
 **Arch-based** (Manajaro)
 ```
 sudo pacman -S docker
@@ -44,7 +44,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 ```
-#### for Windows
+### for Windows
 1. Download Docker Desktop from the [official Docker website](https://www.docker.com/get-started/).
 2. Launch Docker Desktop.
 3. Verify Installation: Open a command prompt or PowerShell and run:
@@ -80,3 +80,5 @@ Run the following command to terminate project and to remove all volumes and ima
 ```
 docker compose down --volumes --rmi all 
 ```
+---
+Done by [Omar Abduh](https://github.com/Omar-Abduh).

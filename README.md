@@ -64,7 +64,7 @@ Start the project
 docker-compose up -d
 ```
 ## Step 4
-Open Jenkins by going to: [http://localhost:80/](http://localhost:80/) .
+Open Jenkins by going to: [http://localhost:80/](http://localhost:80/)
 
 ## Step 5
 If you wish to stop Jenkins and get back to it later, run:

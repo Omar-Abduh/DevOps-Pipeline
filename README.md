@@ -4,7 +4,6 @@ The primary objective of the Security Team is to establish automated security re
 1. **Developing Efficient Security Strategies**: Creating robust methods for handling security incidents promptly and effectively.
 2. **Integrating Advanced Tools**: Leveraging cutting-edge technologies and tools to enhance threat detection and mitigation.
 3. **Collaborating with Other Teams**: Working closely with development, operations, and QA teams to ensure seamless integration of security measures into the CI/CD pipeline.
-4. 
 By embedding security into the CI/CD pipeline, the team aims to foster a proactive and fortified approach to cybersecurity.
 
 The website is built using the Laravel framework.

@@ -1,4 +1,4 @@
-# DevOps
+# DevOps Project
 ### Security Team and CI/CD Pipeline
 The primary objective of the Security Team is to establish automated security response mechanisms and improve overall system resilience. This entails:
 1. **Developing Efficient Security Strategies**: Creating robust methods for handling security incidents promptly and effectively.

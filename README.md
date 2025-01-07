@@ -1,66 +1,82 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# DevOps
+### Security Team and CI/CD Pipeline
+The primary objective of the Security Team is to establish automated security response mechanisms and improve overall system resilience. This entails:
+1. **Developing Efficient Security Strategies**: Creating robust methods for handling security incidents promptly and effectively.
+2. **Integrating Advanced Tools**: Leveraging cutting-edge technologies and tools to enhance threat detection and mitigation.
+3. **Collaborating with Other Teams**: Working closely with development, operations, and QA teams to ensure seamless integration of security measures into the CI/CD pipeline.
+4. 
+By embedding security into the CI/CD pipeline, the team aims to foster a proactive and fortified approach to cybersecurity.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The website is built using the Laravel framework.
 
-## About Laravel
+<p align="center"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo"></p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
+# The project's dependencies
+The project dependencies and their respective versions are specified, and the Dockerfile includes these dependencies.
+- **Composer**: `2.6.5`
+- **APINE**: `3.20`
+- **PHP**: `8.3`
+- **MariaDB**: `10.6`
+- **PhpMyAdmin**: `latest`
+- **Redis**: `7.2`
+- **Node.js**: `18-apline`
+- **Mailhog**: `latest`
+# Installation
+This repository provides a Docker Compose configuration for quickly setting up a Laravel project. This setup is intended for development and testing purposes only and is not recommended for production environments.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Credits: This approach is largely inspired by the [official Docker instructions](https://docs.docker.com/compose/), with modifications to leverage Docker Compose through a `docker-compose.yml` file. This simplifies the steps required to get the Laravel project up and running.
+## Step 1
+Install Docker locally
+#### for Linux 
+**Arch-based** (Manajaro)
+```
+sudo pacman -S docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+```
+**Debian-based**  (Ubuntu)
+```
+sudo apt-get update
+sudo apt-get install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+```
+#### for Windows
+1. Download Docker Desktop from the [official Docker website](https://www.docker.com/get-started/).
+2. Launch Docker Desktop.
+3. Verify Installation: Open a command prompt or PowerShell and run:
+```
+docker --version
+```
+## Step 2
+Clone this repository or download it's contents.
+## Step 3
+Open a terminal window in the same directory where the `docker-compose.yml` from this repository is located. Build the Docker image
+```
+docker-compose build  
+```
+## Step 3
+Start the project
+```
+docker-compose up -d
+```
+## Step 4
+Open Jenkins by going to: [http://localhost:80/](http://localhost:80/) .
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Step 5
+If you wish to stop Jenkins and get back to it later, run:
+```
+docker-compose stop
+```
+If you wish to start again later, just run the same command from Step 3.
 
-## Learning Laravel
+## Removing project
+Once you are done playing with Jenkins maybe it is time to clean things up.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Run the following command to terminate project and to remove all volumes and images used:
+```
+docker compose down --volumes --rmi all 
+```

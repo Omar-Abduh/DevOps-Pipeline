@@ -79,5 +79,3 @@ Run the following command to terminate project and to remove all volumes and ima
 ```
 docker compose down --volumes --rmi all 
 ```
----
-Done by [Omar Abduh](https://github.com/Omar-Abduh).
